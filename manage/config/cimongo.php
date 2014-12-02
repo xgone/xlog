@@ -14,8 +14,8 @@ $config['pass'] = "gone123";
  * Defaults to FALSE. If FALSE, the program continues executing without waiting for a database response. 
  * If TRUE, the program will wait for the database response and throw a MongoCursorException if the update did not succeed.
 */
-$config['query_safety'] = TRUE;
-
+//$config['query_safety'] = TRUE;
+$config['w'] = TRUE;
 //If running in auth mode and the user does not have global read/write then set this to true
 $config['db_flag'] = TRUE;
 
