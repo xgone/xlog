@@ -6,11 +6,11 @@ class Home extends CI_Controller {
 	{
 		$this->load->library("cimongo/cimongo");
 		//insert
-		$res = $this->cimongo->insert('test', array('id' => 1, 'str' => 'hello mongo'));
-		print_r($res);
+		//$res = $this->cimongo->insert('test', array('id' => 1, 'str' => 'hello mongo'));
+		//print_r($res);
 		//get
 		$query = $this->cimongo->limit(1)->get_where('test', array('id' => 1));
-		print_r($query);
+		print_r($query->row_array());
 		exit;
 		$this->load->view('home');
 	}
