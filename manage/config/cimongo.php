@@ -15,9 +15,9 @@ $config['pass'] = "gone123";
  * If TRUE, the program will wait for the database response and throw a MongoCursorException if the update did not succeed.
 */
 //$config['query_safety'] = TRUE;
-$config['w'] = TRUE;
+$config['w'] = 0;
 //If running in auth mode and the user does not have global read/write then set this to true
-$config['db_flag'] = TRUE;
+//$config['db_flag'] = TRUE;
 
 //consider these config only if you want to store the session into mongoDB
 //They will be used in MY_Session.php
