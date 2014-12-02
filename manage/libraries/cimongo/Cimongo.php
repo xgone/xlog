@@ -412,7 +412,7 @@ class Cimongo extends Cimongo_extras {
                         show_error("Nothing to update in Mongo collection or update is not an array", 500);
                 }
                 try {
-                        $options = array_merge(array("safe" => $this->query_safety, 'multiple' => FALSE), $options);
+                        $options = array_merge(array("w" => $this->query_safety, 'multiple' => FALSE), $options);
                         $this->db->selectCollection($collection)->update($this->wheres, $this->updates, $options);
                         $this->_clear();
                         return TRUE;
